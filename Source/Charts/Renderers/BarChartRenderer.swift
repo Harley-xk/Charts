@@ -18,7 +18,7 @@ import CoreGraphics
 
 open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
 {
-    fileprivate class Buffer
+    open class Buffer
     {
         var rects = [CGRect]()
     }
