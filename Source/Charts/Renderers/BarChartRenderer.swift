@@ -32,6 +32,10 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
         self.dataProvider = dataProvider
     }
     
+    open var buffers: [Buffer] {
+        return _buffers
+    }
+    
     // [CGRect] per dataset
     fileprivate var _buffers = [Buffer]()
     
