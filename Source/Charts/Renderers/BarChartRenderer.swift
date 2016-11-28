@@ -20,7 +20,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
 {
     open class Buffer
     {
-        var rects = [CGRect]()
+        open var rects = [CGRect]()
     }
     
     open weak var dataProvider: BarChartDataProvider?
@@ -37,7 +37,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
     }
     
     // [CGRect] per dataset
-    fileprivate var _buffers = [Buffer]()
+    var _buffers = [Buffer]()
     
     open override func initBuffers()
     {

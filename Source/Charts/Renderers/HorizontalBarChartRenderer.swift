@@ -19,19 +19,11 @@ import CoreGraphics
 
 open class HorizontalBarChartRenderer: BarChartRenderer
 {
-    fileprivate class Buffer
-    {
-        var rects = [CGRect]()
-    }
-    
     public override init(dataProvider: BarChartDataProvider?, animator: Animator?, viewPortHandler: ViewPortHandler?)
     {
         super.init(dataProvider: dataProvider, animator: animator, viewPortHandler: viewPortHandler)
     }
-    
-    // [CGRect] per dataset
-    fileprivate var _buffers = [Buffer]()
-    
+        
     open override func initBuffers()
     {
         if let barData = dataProvider?.barData
